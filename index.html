@@ -3,22 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SL TECH - Reparación de celulares, tablets, computadoras, mantenimiento, redes y cursos técnicos.">
-<title>SL TECH | Soluciones Tecnológicas Integrales</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>SL TECH | Soluciones Tecnológicas</title>
 
 <style>
-:root {
-    --blue: #168cff;
-    --cyan: #00d4ff;
-    --dark: #080d18;
-    --panel: #101a2c;
-    --white: #f4f7ff;
-    --gray: #9aa9c0;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -27,476 +14,226 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: var(--dark);
-    color: var(--white);
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+    font-family: Arial, sans-serif;
+    background: #080d18;
+    color: white;
 }
 
 header {
-    height: 85px;
-    padding: 0 8%;
+    background: #080d18;
+    padding: 12px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(8,13,24,.95);
-    border-bottom: 1px solid #1b2b43;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(15px);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-left: auto;
-    order: 2;
-}
-
-.logo img {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
+    z-index: 100;
+    border-bottom: 1px solid #164a80;
 }
 
 nav {
     display: flex;
-    align-items: center;
-    gap: 28px;
-    order: 1;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: #c1cce0;
+    color: white;
+    text-decoration: none;
     font-size: 13px;
-    font-weight: 600;
-    transition: .3s;
 }
 
 nav a:hover {
-    color: var(--cyan);
+    color: #00d4ff;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
+
+.hero {
+    padding: 120px 9%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 80%, #0755a5, #080d18 60%);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 75px);
+    line-height: 1.1;
+}
+
+.azul {
+    color: #00c8ff;
+}
+
+.hero p {
+    color: #aabbd0;
+    margin: 25px 0;
+    max-width: 600px;
+    line-height: 1.8;
 }
 
 .btn {
     display: inline-block;
+    background: linear-gradient(90deg, #168cff, #00d4ff);
     padding: 14px 23px;
+    color: #06111f;
+    text-decoration: none;
+    font-weight: bold;
     border-radius: 7px;
-    font-size: 13px;
-    font-weight: 800;
-    background: linear-gradient(100deg,var(--blue),var(--cyan));
-    color: #04101e;
-    transition: .3s;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px #168cff55;
-}
-
-.hero {
-    min-height: 680px;
-    padding: 120px 9%;
-    display: flex;
-    align-items: center;
-    background:
-      radial-gradient(ellipse at 80% 45%,#0755a52c,transparent 50%),
-      linear-gradient(120deg,#080d18,#0b172b);
-    position: relative;
-}
-
-.hero-content {
-    max-width: 760px;
-}
-
-.tag {
-    display: inline-block;
-    color: var(--cyan);
-    border: 1px solid #168cff55;
-    padding: 9px 16px;
-    border-radius: 30px;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: clamp(42px,7vw,78px);
-    line-height: 1.08;
-    font-weight: 900;
-    margin-bottom: 25px;
-}
-
-.gradient {
-    background: linear-gradient(90deg,var(--blue),var(--cyan));
-    -webkit-background-clip: text;
-    color: transparent;
-}
-
-.hero p {
-    color: var(--gray);
-    font-size: 16px;
-    line-height: 1.9;
-    max-width: 600px;
-    margin-bottom: 35px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn-outline {
-    border: 1px solid #315273;
-    padding: 14px 23px;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: 700;
-    transition: .3s;
-}
-
-.btn-outline:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 35px 9%;
-    background: #0c1423;
-    border-top: 1px solid #1b2b43;
-    border-bottom: 1px solid #1b2b43;
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat h3 {
-    color: var(--cyan);
-    font-size: 26px;
-}
-
-.stat p {
-    color: var(--gray);
-    font-size: 12px;
-    margin-top: 7px;
+    margin: 5px;
 }
 
 section {
-    padding: 100px 9%;
+    padding: 85px 8%;
 }
 
-.section-title {
+.titulo {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
 }
 
-.section-title span {
-    color: var(--cyan);
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 800;
+.titulo h2 {
+    font-size: 38px;
+    margin: 10px;
 }
 
-.section-title h2 {
-    font-size: clamp(30px,4vw,44px);
-    margin: 15px 0;
+.titulo p {
+    color: #aabbd0;
 }
 
-.section-title p {
-    color: var(--gray);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.services-grid {
+.grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
 }
 
 .card {
-    background: linear-gradient(145deg,#111f34,#0d1728);
-    border: 1px solid #213651;
-    padding: 32px 26px;
-    border-radius: 13px;
+    background: #111e31;
+    border: 1px solid #234467;
+    border-radius: 12px;
+    padding: 28px;
     transition: .3s;
 }
 
 .card:hover {
     transform: translateY(-7px);
-    border-color: var(--blue);
-    box-shadow: 0 15px 35px #0005;
-}
-
-.card-icon {
-    font-size: 34px;
-    margin-bottom: 22px;
+    border-color: #00c8ff;
 }
 
 .card h3 {
-    font-size: 18px;
-    margin-bottom: 14px;
+    margin: 15px 0;
 }
 
 .card p {
-    font-size: 13px;
-    color: var(--gray);
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.card ul {
-    list-style: none;
-    margin-bottom: 25px;
-}
-
-.card li {
-    color: #c4d2e6;
-    font-size: 12px;
-    margin: 11px 0;
-}
-
-.card li::before {
-    content: "✓";
-    color: var(--cyan);
-    margin-right: 9px;
-}
-
-.card-link {
-    color: var(--cyan);
-    font-size: 12px;
-    font-weight: 800;
-}
-
-.maintenance {
-    background: #0c1525;
-}
-
-.maintenance-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 60px;
-}
-
-.maintenance h2 {
-    font-size: 40px;
-    margin: 20px 0;
-}
-
-.maintenance p {
-    color: var(--gray);
-    line-height: 1.9;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-.maintenance-list {
-    display: grid;
-    gap: 16px;
-}
-
-.maintenance-item {
-    background: #14243a;
-    padding: 18px;
-    border-radius: 8px;
-    border-left: 3px solid var(--blue);
-    font-size: 13px;
-}
-
-.courses {
-    background:
-      radial-gradient(ellipse at 50% 100%,#0755a52a,transparent 60%);
-}
-
-.course-label {
-    color: var(--cyan);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.course-card {
-    background: linear-gradient(145deg,#13243b,#0c1728);
-    border: 1px solid #254260;
-    padding: 35px;
-    border-radius: 14px;
-}
-
-.course-card h3 {
-    margin: 17px 0;
-    font-size: 21px;
-}
-
-.course-card p {
-    color: var(--gray);
-    font-size: 13px;
-    line-height: 1.8;
-    margin-bottom: 23px;
-}
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 22px;
-}
-
-.payment {
-    background: #0c1525;
-}
-
-.payment-grid {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 22px;
-}
-
-.payment-card {
-    padding: 30px;
-    text-align: center;
-    background: #122139;
-    border: 1px solid #203956;
-    border-radius: 12px;
-}
-
-.payment-card .number {
-    font-size: 30px;
-    color: var(--cyan);
-    margin-bottom: 15px;
-}
-
-.payment-card h3 {
-    margin-bottom: 12px;
-}
-
-.payment-card p {
-    font-size: 13px;
-    color: var(--gray);
-    line-height: 1.7;
-}
-
-.contact {
-    text-align: center;
-    background: radial-gradient(ellipse at center,#0755a52b,transparent 70%);
-}
-
-.contact h2 {
-    font-size: clamp(30px,5vw,48px);
-    margin: 20px 0;
-}
-
-.contact p {
-    color: var(--gray);
+    color: #aabbd0;
     font-size: 14px;
     line-height: 1.8;
-    margin-bottom: 30px;
 }
 
-.contact-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.icono {
+    font-size: 35px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.oscuro {
+    background: #0d1728;
+}
+
+.lista {
+    display: grid;
     gap: 15px;
 }
 
+.lista div {
+    background: #152640;
+    padding: 18px;
+    border-left: 3px solid #168cff;
+    border-radius: 7px;
+}
+
+.pagos {
+    text-align: center;
+}
+
+.contacto {
+    text-align: center;
+    background: radial-gradient(circle, #0755a5, #080d18 70%);
+}
+
+.contacto p {
+    color: #c3d1e4;
+    margin: 20px;
+    line-height: 1.8;
+}
+
 footer {
-    padding: 35px 8%;
-    background: #060a12;
-    border-top: 1px solid #1b2b43;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-footer p {
-    color: #8494ab;
-    font-size: 11px;
-}
-
-footer strong {
-    color: var(--cyan);
+    background: #050911;
+    padding: 30px;
+    text-align: center;
+    color: #aabbd0;
 }
 
 .whatsapp {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    z-index: 100;
+    bottom: 20px;
+    right: 20px;
     background: #25d366;
     color: white;
     padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 800;
-    box-shadow: 0 5px 25px #0007;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 200;
 }
 
-@media(max-width:900px) {
-    header { padding: 0 5%; }
-    nav { gap: 12px; }
-    nav a { font-size: 11px; }
-    .services-grid,.course-grid,.payment-grid {
-        grid-template-columns: repeat(2,1fr);
+@media(max-width:800px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media(max-width:650px) {
+@media(max-width:600px) {
     header {
-        height: auto;
-        min-height: 75px;
-        padding: 12px 5%;
         flex-wrap: wrap;
     }
-
-    .logo img { width: 53px; height: 53px; }
 
     nav {
         order: 2;
         width: 100%;
         overflow-x: auto;
-        padding: 12px 0 5px;
-        gap: 20px;
+        flex-wrap: nowrap;
+        padding: 12px 0;
     }
 
-    nav a { white-space: nowrap; }
-
-    .logo { order: 1; }
-
-    .hero {
-        padding: 95px 7%;
-        min-height: 570px;
+    nav a {
+        white-space: nowrap;
     }
 
-    section { padding: 75px 7%; }
-
-    .services-grid,.course-grid,.payment-grid,
-    .maintenance-content {
+    .grid {
         grid-template-columns: 1fr;
     }
 
-    .stats { padding: 25px 5%; gap: 10px; }
-    .stat h3 { font-size: 21px; }
-    .stat p { font-size: 10px; }
+    .hero {
+        padding: 80px 7%;
+    }
 
-    .maintenance h2 { font-size: 32px; }
-
-    footer { justify-content: center; text-align: center; }
+    section {
+        padding: 65px 7%;
+    }
 }
 </style>
 </head>
@@ -504,369 +241,262 @@ footer strong {
 <body>
 
 <header>
-    <nav>
-        <a href="#inicio">INICIO</a>
-        <a href="#servicios">SERVICIOS</a>
-        <a href="#mantenimiento">MANTENIMIENTO</a>
-        <a href="#cursos">CURSOS</a>
-        <a href="#pagos">PAGOS</a>
-        <a href="#contacto">CONTACTO</a>
-    </nav>
 
-    <a href="#inicio" class="logo">
-        <img src="logo-sltech.png" alt="Logotipo SL TECH">
-    </a>
+<nav>
+<a href="#inicio">INICIO</a>
+<a href="#servicios">SERVICIOS</a>
+<a href="#mantenimiento">MANTENIMIENTO</a>
+<a href="#cursos">CURSOS</a>
+<a href="#pagos">PAGOS</a>
+<a href="#contacto">CONTACTO</a>
+</nav>
+
+<div class="logo">
+<img src="logo-sltech.png" alt="Logo SL TECH">
+</div>
+
 </header>
 
 <main>
 
-<!-- INICIO -->
 <div class="hero" id="inicio">
-    <div class="hero-content">
-        <span class="tag">SOLUCIONES TECNOLÓGICAS INTEGRALES</span>
+<div>
+<h1>
+LA TECNOLOGÍA<br>
+EN LAS MEJORES<br>
+<span class="azul">MANOS.</span>
+</h1>
 
-        <h1>
-            LA TECNOLOGÍA<br>
-            EN LAS MEJORES<br>
-            <span class="gradient">MANOS.</span>
-        </h1>
+<p>
+En SL TECH ofrecemos soluciones tecnológicas integrales:
+reparación de dispositivos, mantenimiento, software,
+hardware, redes y capacitación técnica.
+</p>
 
-        <p>
-            En SL TECH transformamos problemas tecnológicos
-            en soluciones. Reparación de dispositivos, mantenimiento,
-            soporte técnico, redes y capacitación especializada.
-        </p>
+<a class="btn" href="https://wa.me/529984297285">
+SOLICITAR SERVICIO →
+</a>
 
-        <div class="hero-buttons">
-            <a class="btn" href="https://wa.me/529984297285?text=Hola%20SL%20TECH,%20quiero%20información%20sobre%20sus%20servicios.">
-                SOLICITAR SERVICIO →
-            </a>
-
-            <a class="btn-outline" href="#servicios">
-                EXPLORAR SERVICIOS
-            </a>
-        </div>
-    </div>
+<a class="btn" href="#servicios">
+VER SERVICIOS
+</a>
+</div>
 </div>
 
-<div class="stats">
-    <div class="stat">
-        <h3>360°</h3>
-        <p>Soluciones tecnológicas</p>
-    </div>
-    <div class="stat">
-        <h3>24/7</h3>
-        <p>Contacto digital</p>
-    </div>
-    <div class="stat">
-        <h3>100%</h3>
-        <p>Compromiso con el cliente</p>
-    </div>
-</div>
-
-<!-- SERVICIOS -->
 <section id="servicios">
-    <div class="section-title">
-        <span>LO QUE HACEMOS</span>
-        <h2>Nuestros servicios</h2>
-        <p>Soluciones profesionales para tus dispositivos y necesidades tecnológicas.</p>
-    </div>
 
-    <div class="services-grid">
+<div class="titulo">
+<h2>Nuestros servicios</h2>
+<p>Soluciones profesionales para tus dispositivos.</p>
+</div>
 
-        <article class="card">
-            <div class="card-icon">📱</div>
-            <h3>Reparación de celulares</h3>
-            <p>Servicio técnico para diferentes marcas y modelos.</p>
-            <ul>
-                <li>Cambio de pantallas y baterías</li>
-                <li>Centros de carga y flexores</li>
-                <li>Diagnóstico de fallas</li>
-                <li>Problemas de software</li>
-                <li>Reparaciones electrónicas</li>
-            </ul>
-            <a class="card-link" href="https://wa.me/529984297285?text=Quiero%20reparar%20un%20celular.">SOLICITAR SERVICIO →</a>
-        </article>
+<div class="grid">
 
-        <article class="card">
-            <div class="card-icon">💻</div>
-            <h3>Computadoras y laptops</h3>
-            <p>Recupera el rendimiento de tus equipos.</p>
-            <ul>
-                <li>Reparación de hardware</li>
-                <li>Instalación de Windows</li>
-                <li>Ampliación de RAM y SSD</li>
-                <li>Instalación de programas</li>
-                <li>Optimización del sistema</li>
-            </ul>
-            <a class="card-link" href="https://wa.me/529984297285?text=Quiero%20reparar%20una%20computadora.">SOLICITAR SERVICIO →</a>
-        </article>
+<div class="card">
+<div class="icono">📱</div>
+<h3>Reparación de celulares</h3>
+<p>Cambio de pantallas, baterías, centros de carga, flexores, software y diagnóstico de fallas.</p>
+<a href="https://wa.me/529984297285">SOLICITAR SERVICIO →</a>
+</div>
 
-        <article class="card">
-            <div class="card-icon">📲</div>
-            <h3>Tablets</h3>
-            <p>Reparación y mantenimiento de dispositivos móviles.</p>
-            <ul>
-                <li>Cambio de display</li>
-                <li>Reparación de centros de carga</li>
-                <li>Problemas de batería</li>
-                <li>Diagnóstico técnico</li>
-                <li>Soluciones de software</li>
-            </ul>
-            <a class="card-link" href="https://wa.me/529984297285?text=Quiero%20reparar%20una%20tablet.">SOLICITAR SERVICIO →</a>
-        </article>
+<div class="card">
+<div class="icono">📲</div>
+<h3>Reparación de tablets</h3>
+<p>Reparación de displays, baterías, centros de carga y problemas de software.</p>
+<a href="https://wa.me/529984297285">SOLICITAR SERVICIO →</a>
+</div>
 
-        <article class="card">
-            <div class="card-icon">🛠️</div>
-            <h3>Software y sistemas</h3>
-            <p>Soluciones para el funcionamiento de tus dispositivos.</p>
-            <ul>
-                <li>Instalación de sistemas operativos</li>
-                <li>Eliminación de virus y malware</li>
-                <li>Instalación y activación de Office</li>
-                <li>Optimización de equipos</li>
-                <li>Respaldo y recuperación de datos</li>
-            </ul>
-            <a class="card-link" href="https://wa.me/529984297285?text=Necesito%20soporte%20de%20software.">SOLICITAR SERVICIO →</a>
-        </article>
+<div class="card">
+<div class="icono">💻</div>
+<h3>Computadoras y laptops</h3>
+<p>Reparación de hardware, instalación de Windows, ampliación de RAM y SSD y optimización.</p>
+<a href="https://wa.me/529984297285">SOLICITAR SERVICIO →</a>
+</div>
 
-        <article class="card">
-            <div class="card-icon">🌐</div>
-            <h3>Redes y cableado</h3>
-            <p>Conectividad y soluciones de infraestructura.</p>
-            <ul>
-                <li>Instalación de redes LAN</li>
-                <li>Cableado estructurado</li>
-                <li>Configuración de routers</li>
-                <li>Configuración de redes WiFi</li>
-                <li>Soporte técnico de conectividad</li>
-            </ul>
-            <a class="card-link" href="https://wa.me/529984297285?text=Necesito%20un%20servicio%20de%20redes.">SOLICITAR SERVICIO →</a>
-        </article>
+<div class="card">
+<div class="icono">🛠️</div>
+<h3>Software y sistemas</h3>
+<p>Instalación de programas, Office, sistemas operativos, eliminación de virus y recuperación de datos.</p>
+<a href="https://wa.me/529984297285">SOLICITAR SERVICIO →</a>
+</div>
 
-        <article class="card">
-            <div class="card-icon">⚙️</div>
-            <h3>Soporte técnico</h3>
-            <p>Asistencia tecnológica para particulares y negocios.</p>
-            <ul>
-                <li>Diagnóstico de equipos</li>
-                <li>Asistencia remota</li>
-                <li>Configuración de dispositivos</li>
-                <li>Solución de problemas</li>
-                <li>Asesoría tecnológica</li>
-            </ul>
-            <a class="card-link" href="https://wa.me/529984297285?text=Necesito%20soporte%20tecnico.">SOLICITAR SERVICIO →</a>
-        </article>
+<div class="card">
+<div class="icono">🌐</div>
+<h3>Redes y cableado</h3>
+<p>Instalación de redes LAN, cableado estructurado, configuración de routers y WiFi.</p>
+<a href="https://wa.me/529984297285">SOLICITAR SERVICIO →</a>
+</div>
 
-    </div>
+<div class="card">
+<div class="icono">⚙️</div>
+<h3>Soporte técnico</h3>
+<p>Diagnóstico, asistencia remota, configuración y asesoría tecnológica.</p>
+<a href="https://wa.me/529984297285">SOLICITAR SERVICIO →</a>
+</div>
+
+</div>
 </section>
 
-<!-- MANTENIMIENTO -->
-<section class="maintenance" id="mantenimiento">
-    <div class="maintenance-content">
-        <div>
-            <span class="tag">CUIDAMOS TUS EQUIPOS</span>
-            <h2>Mantenimiento <span class="gradient">preventivo y correctivo</span></h2>
-            <p>
-                Prolonga la vida útil de tus dispositivos con nuestros
-                servicios de mantenimiento. Evita fallas, mejora el
-                rendimiento y conserva tus equipos en excelentes condiciones.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Quiero%20informacion%20sobre%20mantenimiento.">
-                COTIZAR MANTENIMIENTO →
-            </a>
-        </div>
+<section class="oscuro" id="mantenimiento">
 
-        <div class="maintenance-list">
-            <div class="maintenance-item">🧹 Limpieza interna y externa de equipos</div>
-            <div class="maintenance-item">🌡️ Cambio de pasta térmica</div>
-            <div class="maintenance-item">💨 Limpieza de ventiladores y disipadores</div>
-            <div class="maintenance-item">⚡ Optimización de rendimiento</div>
-            <div class="maintenance-item">🔍 Revisión y diagnóstico de componentes</div>
-            <div class="maintenance-item">🔧 Mantenimiento de software y sistema operativo</div>
-        </div>
-    </div>
+<div class="titulo">
+<h2>Mantenimiento preventivo y correctivo</h2>
+<p>Cuida tus equipos y mejora su rendimiento.</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>🧹 Limpieza interna</h3>
+<p>Limpieza de componentes, ventiladores y disipadores.</p>
+</div>
+
+<div class="card">
+<h3>🌡️ Mantenimiento térmico</h3>
+<p>Cambio de pasta térmica y revisión de temperaturas.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Optimización</h3>
+<p>Mejora del rendimiento y mantenimiento de software.</p>
+</div>
+</div>
+
 </section>
 
-<!-- CURSOS -->
-<section class="courses" id="cursos">
-    <div class="section-title">
-        <span>APRENDE CON SL TECH</span>
-        <h2>Capacitación y cursos técnicos</h2>
-        <p>
-            Aprende habilidades tecnológicas y desarrolla tus conocimientos
-            con cursos enfocados en la práctica.
-        </p>
-    </div>
 
-    <div class="course-grid">
+<section id="cursos">
 
-        <article class="course-card">
-            <span class="course-label">CURSO TÉCNICO</span>
-            <div class="card-icon">📱</div>
-            <h3>Reparación de celulares</h3>
-            <p>
-                Aprende diagnóstico, desmontaje, cambio de pantallas,
-                baterías, centros de carga, componentes y mantenimiento.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Hola,%20me%20interesa%20el%20curso%20de%20reparacion%20de%20celulares.">
-                INFORMACIÓN E INSCRIPCIÓN
-            </a>
-        </article>
+<div class="titulo">
+<h2>Cursos de reparación</h2>
+<p>Aprende tecnología y desarrolla habilidades técnicas.</p>
+</div>
 
-        <article class="course-card">
-            <span class="course-label">CURSO TÉCNICO</span>
-            <div class="card-icon">📲</div>
-            <h3>Reparación de tablets</h3>
-            <p>
-                Conoce los componentes, herramientas, diagnóstico,
-                mantenimiento y procedimientos de reparación.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Hola,%20me%20interesa%20el%20curso%20de%20reparacion%20de%20tablets.">
-                INFORMACIÓN E INSCRIPCIÓN
-            </a>
-        </article>
+<div class="grid">
 
-        <article class="course-card">
-            <span class="course-label">CURSO TÉCNICO</span>
-            <div class="card-icon">💻</div>
-            <h3>Reparación de computadoras</h3>
-            <p>
-                Aprende mantenimiento, diagnóstico de hardware,
-                instalación de sistemas, optimización y solución de fallas.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Hola,%20me%20interesa%20el%20curso%20de%20reparacion%20de%20computadoras.">
-                INFORMACIÓN E INSCRIPCIÓN
-            </a>
-        </article>
+<div class="card">
+<div class="icono">📱</div>
+<h3>Curso de celulares</h3>
+<p>Diagnóstico, herramientas, pantallas, baterías y reparación.</p>
+<strong>Precio: $1,800 MXN</strong>
+<p>Duración: 4 semanas</p>
+<p>Capacitación: 24 horas</p>
+<a href="https://wa.me/529984297285?text=Me%20interesa%20el%20curso%20de%20celulares">INSCRIBIRME →</a>
+</div>
 
-        <article class="course-card">
-            <span class="course-label">CURSO TÉCNICO</span>
-            <div class="card-icon">🔬</div>
-            <h3>Electrónica básica</h3>
-            <p>
-                Introducción a componentes electrónicos, mediciones,
-                herramientas, soldadura y diagnóstico de circuitos.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Hola,%20me%20interesa%20el%20curso%20de%20electronica.">
-                INFORMACIÓN E INSCRIPCIÓN
-            </a>
-        </article>
+<div class="card">
+<div class="icono">📲</div>
+<h3>Curso de tablets</h3>
+<p>Componentes, diagnóstico y mantenimiento.</p>
+<strong>Precio: $1,500 MXN</strong>
+<p>Duración: 3 semanas</p>
+<p>Capacitación: 18 horas</p>
+<a href="https://wa.me/529984297285?text=Me%20interesa%20el%20curso%20de%20tablets">INSCRIBIRME →</a>
+</div>
 
-        <article class="course-card">
-            <span class="course-label">CURSO TÉCNICO</span>
-            <div class="card-icon">🌐</div>
-            <h3>Redes y cableado estructurado</h3>
-            <p>
-                Aprende conexiones, armado de cables, configuración
-                de redes y fundamentos de infraestructura.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Hola,%20me%20interesa%20el%20curso%20de%20redes.">
-                INFORMACIÓN E INSCRIPCIÓN
-            </a>
-        </article>
+<div class="card">
+<div class="icono">💻</div>
+<h3>Curso de computadoras</h3>
+<p>Hardware, software, mantenimiento y sistemas operativos.</p>
+<strong>Precio: $1,800 MXN</strong>
+<p>Duración: 4 semanas</p>
+<p>Capacitación: 24 horas</p>
+<a href="https://wa.me/529984297285?text=Me%20interesa%20el%20curso%20de%20computadoras">INSCRIBIRME →</a>
+</div>
 
-        <article class="course-card">
-            <span class="course-label">CAPACITACIÓN</span>
-            <div class="card-icon">🖥️</div>
-            <h3>Software y sistemas operativos</h3>
-            <p>
-                Aprende instalación de Windows, programas,
-                configuración, mantenimiento y optimización.
-            </p>
-            <a class="btn" href="https://wa.me/529984297285?text=Hola,%20me%20interesa%20la%20capacitacion%20de%20software.">
-                INFORMACIÓN E INSCRIPCIÓN
-            </a>
-        </article>
+<div class="card">
+<div class="icono">🔬</div>
+<h3>Electrónica básica</h3>
+<p>Componentes, mediciones, soldadura y circuitos.</p>
+<strong>Precio: $1,400 MXN</strong>
+<p>Duración: 3 semanas</p>
+<p>Capacitación: 18 horas</p>
+<a href="https://wa.me/529984297285?text=Me%20interesa%20el%20curso%20de%20electronica">INSCRIBIRME →</a>
+</div>
 
-    </div>
+<div class="card">
+<div class="icono">🌐</div>
+<h3>Curso de redes</h3>
+<p>Conexiones, cableado estructurado y configuración de redes.</p>
+<strong>Precio: $1,600 MXN</strong>
+<p>Duración: 3 semanas</p>
+<p>Capacitación: 18 horas</p>
+<a href="https://wa.me/529984297285?text=Me%20interesa%20el%20curso%20de%20redes">INSCRIBIRME →</a>
+</div>
+
+<div class="card">
+<div class="icono">🖥️</div>
+<h3>Software y Windows</h3>
+<p>Instalación, configuración y optimización de sistemas.</p>
+<strong>Precio: $800 MXN</strong>
+<p>Duración: 1 semana</p>
+<p>Capacitación: 6 horas</p>
+<a href="https://wa.me/529984297285?text=Me%20interesa%20el%20curso%20de%20software">INSCRIBIRME →</a>
+</div>
+
+</div>
 </section>
 
-<!-- PAGOS -->
-<section class="payment" id="pagos">
-    <div class="section-title">
-        <span>TRANSPARENCIA Y CONFIANZA</span>
-        <h2>Paga únicamente por el servicio</h2>
-        <p>
-            En SL TECH trabajamos con cotizaciones personalizadas.
-            Cada dispositivo y cada reparación tienen necesidades diferentes.
-        </p>
-    </div>
 
-    <div class="payment-grid">
-        <div class="payment-card">
-            <div class="number">01</div>
-            <h3>Solicita tu servicio</h3>
-            <p>Cuéntanos qué problema presenta tu dispositivo o qué necesitas.</p>
-        </div>
+<section class="oscuro pagos" id="pagos">
 
-        <div class="payment-card">
-            <div class="number">02</div>
-            <h3>Recibe tu cotización</h3>
-            <p>Te informamos el costo de piezas, mano de obra y tiempo estimado.</p>
-        </div>
+<div class="titulo">
+<h2>Paga por el servicio que necesitas</h2>
+<p>Precios personalizados según el trabajo solicitado.</p>
+</div>
 
-        <div class="payment-card">
-            <div class="number">03</div>
-            <h3>Realiza tu pago</h3>
-            <p>Pagas por el servicio contratado, según las condiciones acordadas.</p>
-        </div>
-    </div>
+<div class="grid">
 
-    <div style="text-align:center;margin-top:40px">
-        <a class="btn" href="https://wa.me/529984297285?text=Hola%20SL%20TECH,%20quiero%20una%20cotizacion.">
-            OBTENER UNA COTIZACIÓN →
-        </a>
-    </div>
+<div class="card">
+<h3>01. Solicita</h3>
+<p>Cuéntanos qué necesitas reparar o contratar.</p>
+</div>
+
+<div class="card">
+<h3>02. Cotiza</h3>
+<p>Recibe el precio de piezas y mano de obra.</p>
+</div>
+
+<div class="card">
+<h3>03. Confirma</h3>
+<p>Autoriza el servicio y realiza el pago acordado.</p>
+</div>
+
+</div>
 </section>
 
-<!-- CONTACTO -->
-<section class="contact" id="contacto">
-    <span class="tag">ESTAMOS PARA AYUDARTE</span>
-    <h2>¿Necesitas una <span class="gradient">solución tecnológica?</span></h2>
-    <p>
-        Ponte en contacto con SL TECH.<br>
-        Estamos listos para ayudarte con tu próximo proyecto o reparación.
-    </p>
+<section class="contacto" id="contacto">
 
-    <div class="contact-links">
-        <a class="btn" href="https://wa.me/529984297285">
-            WHATSAPP
-        </a>
+<h2>¿Necesitas una solución tecnológica?</h2>
 
-        <a class="btn-outline" href="mailto:sltech2123@gmail.com">
-            CORREO ELECTRÓNICO
-        </a>
+<p>
+Contacta con SL TECH y recibe atención personalizada.<br>
+Soluciones Tecnológicas Integrales.<br>
+Cancún, Quintana Roo, México.
+</p>
 
-        <a class="btn-outline" href="https://instagram.com/sltech2123" target="_blank">
-            INSTAGRAM
-        </a>
-    </div>
+<a class="btn" href="https://wa.me/529984297285">
+WHATSAPP
+</a>
 
-    <p style="margin-top:35px">
-        <strong>SL TECH</strong><br>
-        Soluciones Tecnológicas Integrales<br>
-        Cancún, Quintana Roo, México
-    </p>
+<a class="btn" href="mailto:sltech2123@gmail.com">
+CORREO
+</a>
+
+<a class="btn" href="https://instagram.com/sltech2123">
+INSTAGRAM
+</a>
+
 </section>
 
 </main>
 
 <footer>
-    <p>© <span id="year"></span> <strong>SL TECH</strong> - Todos los derechos reservados.</p>
-    <p>TECNOLOGÍA · REPARACIÓN · INNOVACIÓN</p>
+© 2026 SL TECH - Soluciones Tecnológicas Integrales
 </footer>
 
-<a class="whatsapp"
-   href="https://wa.me/529984297285?text=Hola%20SL%20TECH"
-   target="_blank">
-   ☎ WhatsApp
+<a class="whatsapp" href="https://wa.me/529984297285">
+WhatsApp
 </a>
-
-<script>
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
 
 </body>
 </html>
